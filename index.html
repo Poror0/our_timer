@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Абаюдно</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: 'Great Vibes', cursive; font-weight: 400; font-style: normal;">Наша история</h1>
+
+        <div class="timer-card">
+            <div class="heart-icon top-left"></div>
+            <h2>Сколько дней знакомы</h2>
+            <div class="timer" id="meeting-timer">
+                <div class="time-unit"><span id="meeting-days">0</span><span class="label">Дней</span></div>
+                <div class="time-unit"><span id="meeting-hours">0</span><span class="label">Часов</span></div>
+                <div class="time-unit"><span id="meeting-minutes">0</span><span class="label">Минут</span></div>
+                <div class="time-unit"><span id="meeting-seconds">0</span><span class="label">Секунд</span></div>
+            </div>
+        </div>
+
+        <div class="timer-card">
+            <div class="heart-icon bottom-right"></div>
+            <h2>Дней без ссор</h2>
+            <div class="timer" id="arguments-timer">
+                <div class="time-unit"><span id="arguments-days">0</span><span class="label">Дней</span></div>
+                <div class="time-unit"><span id="arguments-hours">0</span><span class="label">Часов</span></div>
+                <div class="time-unit"><span id="arguments-minutes">0</span><span class="label">Минут</span></div>
+                <div class="time-unit"><span id="arguments-seconds">0</span><span class="label">Секунд</span></div>
+            </div>
+            <button id="reset-button">Сбросить таймер(</button>
+        </div>
+    </div>
+
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <div class="heart-icon modal-heart"></div>
+            <h3>Введите пароль</h3>
+            <input type="password" id="password-input" placeholder="Введите пароль">
+            <div class="error-message" id="password-error">Неверный пароль</div>
+            <div class="button-group">
+                <button id="cancel-button">Отмена</button>
+                <button id="submit-button">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+<!-- Подключение Firebase v8 (без ES-модулей) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

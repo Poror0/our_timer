@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #fff, #ffc0cb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+      
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #e75480;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timer-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    color: #e75480;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.time-unit span:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e75480;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #e75480;
+    opacity: 0.8;
+}
+
+button {
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d64d79;
+}
+
+.heart-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffc0cb' stroke='%23e75480' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.top-left {
+    top: -15px;
+    left: -15px;
+}
+
+.bottom-right {
+    bottom: -15px;
+    right: -15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-heart {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+h3 {
+    color: #e75480;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ffc0cb;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e75480;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#cancel-button {
+    background-color: #f8f8f8;
+    color: #666;
+}
+
+#cancel-button:hover {
+    background-color: #eaeaea;
+}
+
+.error-message {
+    color: #ff3860;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .timer {
+        flex-wrap: wrap;
+    }
+    
+    .time-unit {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+    }
+}
+
